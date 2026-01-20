@@ -11,7 +11,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
-GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', "AIzaSyBYPhIsuGYXzMRiYrFi7yw6M2bH3EB4TFA")
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 
 if not GEMINI_API_KEY or GEMINI_API_KEY == "your-gemini-api-key-here":
     raise ValueError("Please set your Gemini API key")
